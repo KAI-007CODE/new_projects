@@ -13,8 +13,10 @@ def num_to_words(str):
                value=x[str[i]]
                if value < 100:
                     current=current+value
+                    
                else :
                     current=current*value
+                    
           else:
                continue #will ignore any misspelled word
      total = total + current
