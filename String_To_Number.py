@@ -19,8 +19,8 @@ print(a)
 a.reverse()
 print(a)
 #100000000
+
 for i in range(0,len(a)):
-     
      if i<2:
           count=count+a[i]
           print(count)
@@ -38,6 +38,8 @@ for i in range(0,len(a)):
           print(count)
      else:
           continue
+
+
 total=count
      
 print("the given number in the string is equal to ", total)
