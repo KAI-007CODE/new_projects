@@ -1,24 +1,44 @@
+import re
+count=0
+total=0
+print(a)
 x={"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10, "eleven":11, "twelve": 12, "thirteen": 13, "fourteen": 14, "fifteen": 15, "sixteen":16, "seventeen": 17, "eighteen": 18, "nineteen": 19, "twenty": 20, "thirty":30, "forty":40, "fifty":50, "sixty":60, "sventy":70, "eighty":80, "ninety":90, "hundred":100, "thousand":1000, "lakh":100000,"corer":10000000}
 
 str=input("enter a string you want to connnvert to a number: ")
+a=str.split( )
+y=["hundred", "thousand", "lakh", "corer"]
 
-def num_to_words(str):
-     str=str.lower()
-     str=str.split(" ")
-     total = 0
-     current = 0
+for i in  y:
+     if i in a :
+          a.remove(i)
 
-     for  i in range(len(str)):
-          if str[i] in x:
-               value=x[str[i]]
-               if value < 100:
-                    current=current+value
-                    
-               else :
-                    current=current*value
-                    
-          else:
-               continue #will ignore any misspelled word
-     total = total + current
-     print ("the converted number is ", total)
-num_to_words(str)
+for i in range (0,len(a)):
+     a[i]=x[a[i]]
+
+print(a)
+a.reverse()
+print(a)
+#100000000
+for i in range(0,len(a)):
+     
+     if i<2:
+          count=count+a[i]
+          print(count)
+     if i==2:
+          count=count+(a[i]*100)
+          print(count)
+     if i==3 or i==4:
+          count=count+(a[i]*1000)
+          print(count)
+     if i==5 or i==6:
+          count=count+(a[i]*100000)
+          print(count)
+     if i==7 or i==8:
+          count=count+(a[i]*10000000)
+          print(count)
+     else:
+          continue
+total=count
+     
+print("the given number in the string is equal to ", total)
+
