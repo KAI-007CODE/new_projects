@@ -26,19 +26,14 @@ print(a)
 for i in range(0,len(a)):
      if i<2:
           count=count+a[i]
-          print(count)
      if i==2:
           count=count+(a[i]*100)
-          print(count)
      if i==3 or i==4:
           count=count+(a[i]*1000)
-          print(count)
      if i==5 or i==6:
           count=count+(a[i]*100000)
-          print(count)
      if i==7 or i==8:
           count=count+(a[i]*10000000)
-          print(count)
      else:
           continue
 total=count
